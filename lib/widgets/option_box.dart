@@ -28,7 +28,12 @@ class OptionBox extends StatelessWidget {
             ),
             const Align(
                 alignment: Alignment.topCenter,
-                child: Text("Defterre Gimmi be Fulfulde")),
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Text(
+                    "Defterre Gimmi be Fulfulde",
+                  ),
+                )),
             Align(
               alignment: Alignment.center,
               child: Image.asset(
