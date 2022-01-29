@@ -9,7 +9,7 @@ class OptionBox extends StatelessWidget {
     return Card(
       color: Palette.primary,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(14),
       ),
       child: Container(
         height: 200,
