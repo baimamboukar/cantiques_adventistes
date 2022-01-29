@@ -17,7 +17,7 @@ class OptionBox extends StatelessWidget {
         decoration: BoxDecoration(
           color: Palette.light,
           borderRadius:
-              const BorderRadius.only(bottomRight: Radius.elliptical(100, 70)),
+              const BorderRadius.only(bottomRight: Radius.elliptical(150, 100)),
         ),
         child: Stack(),
       ),
