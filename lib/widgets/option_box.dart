@@ -32,7 +32,7 @@ class OptionBox extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Image.asset(
-                "assets/images/logo.png",
+                "assets/images/advent.jpg",
                 height: 80,
                 width: 80,
               ),
