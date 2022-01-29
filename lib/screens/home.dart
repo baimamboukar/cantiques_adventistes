@@ -1,3 +1,4 @@
+import 'package:cantiques_adventistes/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -10,7 +11,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           NavigationRail(
             selectedIndex: 0,
-            backgroundColor: Paltte.primary,
+            backgroundColor: Palette.primary,
             onDestinationSelected: (int index) {},
             labelType: NavigationRailLabelType.selected,
             destinations: const [
