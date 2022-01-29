@@ -9,10 +9,8 @@ class CantiquesAdventistes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _appRouter = $AppRouter();
-    return MaterialApp.router(
+    return MaterialApp(
       title: 'Cantiques Adventistes',
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
       useInheritedMediaQuery: true,
       debugShowCheckedModeBanner: false,
       restorationScopeId: 'cantiques_adventistes',
