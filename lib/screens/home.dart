@@ -10,6 +10,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           NavigationRail(
             selectedIndex: 0,
+            backgroundColor: Paltte.primary,
             onDestinationSelected: (int index) {},
             labelType: NavigationRailLabelType.selected,
             destinations: const [
