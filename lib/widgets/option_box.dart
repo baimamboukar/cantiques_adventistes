@@ -7,42 +7,47 @@ class OptionBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Palette.primary,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
-      ),
-      child: Container(
-        height: 200,
-        width: 200,
-        decoration: BoxDecoration(
-          color: Palette.light,
-          borderRadius:
-              const BorderRadius.only(bottomRight: Radius.elliptical(150, 100)),
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, '/');
+      },
+      child: Card(
+        color: Palette.primary,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
         ),
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.bottomRight,
-              child: FaIcon(FontAwesomeIcons.bookOpen, color: Palette.dark),
-            ),
-            const Align(
-                alignment: Alignment.topCenter,
-                child: Padding(
-                  padding: EdgeInsets.all(12.0),
-                  child: Text(
-                    "Defterre Gimmi be Fulfulde",
-                  ),
-                )),
-            Align(
-              alignment: Alignment.center,
-              child: Image.asset(
-                "assets/images/advent.jpg",
-                height: 80,
-                width: 80,
+        child: Container(
+          height: 200,
+          width: 200,
+          decoration: BoxDecoration(
+            color: Palette.light,
+            borderRadius: const BorderRadius.only(
+                bottomRight: Radius.elliptical(150, 100)),
+          ),
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.bottomRight,
+                child: FaIcon(FontAwesomeIcons.bookOpen, color: Palette.dark),
               ),
-            )
-          ],
+              const Align(
+                  alignment: Alignment.topCenter,
+                  child: Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Text(
+                      "Defterre Gimmi be Fulfulde",
+                    ),
+                  )),
+              Align(
+                alignment: Alignment.center,
+                child: Image.asset(
+                  "assets/images/advent.jpg",
+                  height: 80,
+                  width: 80,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
