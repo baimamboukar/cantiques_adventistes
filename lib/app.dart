@@ -21,7 +21,6 @@ class CantiquesAdventistes extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: GoogleFonts.xanhMonoTextTheme(),
       ),
-      home: const Home(),
     );
   }
 }
