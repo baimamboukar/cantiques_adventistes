@@ -34,9 +34,23 @@ class Home extends StatelessWidget {
           ),
           const VerticalDivider(thickness: 1, width: 1),
           // This is the main content.
-          const Expanded(
-            child: Center(
-              child: Text("Defterre Gimmi"),
+          Expanded(
+            child: Column(
+              children: const [
+                Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      "Defterre Gimmi",
+                      style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           )
         ],
