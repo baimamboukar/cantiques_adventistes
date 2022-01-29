@@ -27,6 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  auto_route: ^3.2.2
   auto_size_text: ^3.0.0
   cupertino_icons: ^1.0.2
   flutter:
@@ -57,7 +58,6 @@ flutter:
     - assets/json/
     - assets/images/
     - assets/audio/
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
