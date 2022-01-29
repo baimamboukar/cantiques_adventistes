@@ -1,4 +1,5 @@
 import 'package:cantiques_adventistes/utils/utils.dart';
+import 'package:cantiques_adventistes/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -36,8 +37,8 @@ class Home extends StatelessWidget {
           // This is the main content.
           Expanded(
             child: Column(
-              children: const [
-                Center(
+              children: [
+                const Center(
                   child: Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
@@ -50,6 +51,13 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
+                const SizedBox(height: 16.0),
+                Row(
+                  children: const [
+                    OptionBox(),
+                    OptionBox(),
+                  ],
+                )
               ],
             ),
           )
