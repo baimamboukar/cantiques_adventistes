@@ -12,8 +12,8 @@ class OptionBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
       ),
       child: Container(
-        height: 100,
-        width: 100,
+        height: 200,
+        width: 200,
         decoration: BoxDecoration(
           color: Palette.light,
           borderRadius:
