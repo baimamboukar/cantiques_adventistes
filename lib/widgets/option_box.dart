@@ -1,5 +1,6 @@
 import 'package:cantiques_adventistes/utils/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class OptionBox extends StatelessWidget {
   const OptionBox({Key? key}) : super(key: key);
@@ -19,7 +20,21 @@ class OptionBox extends StatelessWidget {
           borderRadius:
               const BorderRadius.only(bottomRight: Radius.elliptical(150, 100)),
         ),
-        child: Stack(),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.bottomRight,
+              child: FaIcon(FontAwesomeIcons.bookOpen, color: Palette.dark),
+            ),
+            const Align(
+                alignment: Alignment.topCenter,
+                child: Text("Defterre Gimmi be Fulfulde")),
+            Align(
+              alignment: Alignment.center,
+              child: Image.asset("assets/images/logo.jpg"),
+            )
+          ],
+        ),
       ),
     );
   }
