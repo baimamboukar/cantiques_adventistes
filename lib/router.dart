@@ -4,6 +4,7 @@ import 'package:cantiques_adventistes/screens/screens.dart';
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
+    AutoRoute(page: Home, initial: true),
     AutoRoute(page: Home, path: '/defterre-gimmi'),
     AutoRoute(page: Home),
   ],
