@@ -31,7 +31,7 @@ class OptionBox extends StatelessWidget {
                 child: Text("Defterre Gimmi be Fulfulde")),
             Align(
               alignment: Alignment.center,
-              child: Image.asset("assets/images/logo.jpg"),
+              child: Image.asset("assets/images/logo.png"),
             )
           ],
         ),
