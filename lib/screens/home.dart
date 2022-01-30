@@ -49,7 +49,7 @@ class Home extends HookConsumerWidget {
               NavigationRailDestination(
                 icon: const Icon(Icons.bookmark_border),
                 selectedIcon: const Icon(Icons.book),
-                label: AutoSizeText(
+                label: Text(
                   "Bookmarks",
                   style: Styles.design(color: Palette.light, size: 14),
                 ),
