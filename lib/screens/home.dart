@@ -54,6 +54,13 @@ class Home extends HookConsumerWidget {
                   style: Styles.design(color: Palette.light, size: 14),
                 ),
               ),
+              const NavigationRailDestination(
+                icon: Icon(Icons.book),
+                selectedIcon: Icon(Icons.book),
+                label: Text(
+                  "Saved",
+                ),
+              ),
             ],
           ),
           const VerticalDivider(thickness: 1, width: 1),
