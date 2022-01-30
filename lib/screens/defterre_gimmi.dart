@@ -12,7 +12,9 @@ class DefterreGimmi extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              context.router.pushNamed("defterre-gimmi/10");
+              context.router.pushNamed(
+                "/cantique-view/10",
+              );
             },
             child: const ListTile(
               title: Text("Baaba Ceenido"),
