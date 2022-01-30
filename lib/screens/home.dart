@@ -24,8 +24,12 @@ class Home extends HookConsumerWidget {
                 Styles.design(color: Palette.dark, size: 16),
             selectedIconTheme: IconThemeData(color: Palette.light),
             unselectedIconTheme: IconThemeData(color: Palette.dark),
-            leading:
-                IconButton(onPressed: () {}, icon: const Icon(Icons.dashboard)),
+            leading: IconButton(
+                onPressed: () {
+                  // open drawer
+                  
+                },
+                icon: const Icon(Icons.dashboard)),
             trailing: const CircleAvatar(
               radius: 20,
               backgroundImage: AssetImage(
