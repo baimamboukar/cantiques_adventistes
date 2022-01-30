@@ -12,6 +12,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           NavigationRail(
             selectedIndex: 0,
+            trailing: Image.asset("assets/images/advent.jpg"),
             backgroundColor: Palette.primary,
             onDestinationSelected: (int index) {},
             labelType: NavigationRailLabelType.selected,
