@@ -7,4 +7,10 @@ class Styles {
     color: Palette.primary,
     fontStyle: FontStyle.italic,
   );
+  static TextStyle strophe = TextStyle(
+    fontSize: 16,
+    color: Palette.dark,
+  );
+  static TextStyle title = TextStyle(
+      fontSize: 20, color: Palette.primary, fontWeight: FontWeight.bold);
 }
