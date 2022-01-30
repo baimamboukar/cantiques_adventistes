@@ -15,12 +15,9 @@ class Home extends HookConsumerWidget {
         children: <Widget>[
           NavigationRail(
             selectedIndex: 0,
-            trailing: CircleAvatar(
-              child: Image.asset(
-                "assets/images/advent.jpg",
-                height: 30,
-                width: 30,
-              ),
+            trailing: const CircleAvatar(
+              radius: 40,
+              backgroundImage: AssetImage("assets/images/advent.jpg"),
             ),
             backgroundColor: Palette.primary,
             onDestinationSelected: (int _index) {
