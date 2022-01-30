@@ -27,7 +27,6 @@ class Home extends HookConsumerWidget {
             leading: IconButton(
                 onPressed: () {
                   // open drawer
-                  
                 },
                 icon: const Icon(Icons.dashboard)),
             trailing: const CircleAvatar(
@@ -42,6 +41,14 @@ class Home extends HookConsumerWidget {
             },
             labelType: NavigationRailLabelType.all,
             destinations: [
+              NavigationRailDestination(
+                icon: const Icon(Icons.bookmark_border),
+                selectedIcon: const Icon(Icons.book),
+                label: Text(
+                  "Bookmarks",
+                  style: Styles.design(color: Palette.light, size: 14),
+                ),
+              ),
               NavigationRailDestination(
                 icon: const Icon(Icons.bookmark_border),
                 selectedIcon: const Icon(Icons.book),
