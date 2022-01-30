@@ -13,7 +13,7 @@ class DefterreGimmi extends StatelessWidget {
           GestureDetector(
             onTap: () {
               context.router.pushNamed(
-                "/defterre-gimmi/10",
+                "/cantique-view/",
               );
             },
             child: const ListTile(
