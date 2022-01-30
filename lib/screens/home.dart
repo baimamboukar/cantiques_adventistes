@@ -16,7 +16,14 @@ class Home extends HookConsumerWidget {
       body: Row(
         children: <Widget>[
           NavigationRail(
-            selectedIndex: 0,
+            selectedIndex: index.state,
+            groupAlignment: 10,
+            selectedLabelTextStyle:
+                Styles.design(color: Palette.light, size: 16, bold: true),
+            unselectedLabelTextStyle:
+                Styles.design(color: Palette.dark, size: 16),
+            selectedIconTheme: IconThemeData(color: Palette.light),
+            unselectedIconTheme: IconThemeData(color: Palette.dark),
             leading:
                 IconButton(onPressed: () {}, icon: const Icon(Icons.dashboard)),
             trailing: const CircleAvatar(
@@ -29,12 +36,12 @@ class Home extends HookConsumerWidget {
             onDestinationSelected: (int _index) {
               index.state = _index;
             },
-            labelType: NavigationRailLabelType.selected,
+            labelType: NavigationRailLabelType.all,
             destinations: [
               NavigationRailDestination(
                 icon: const Icon(Icons.favorite_border),
                 selectedIcon: const Icon(Icons.favorite),
-                label: AutoSizeText(
+                label: Text(
                   "Cantiques",
                   style: Styles.design(color: Palette.light, size: 14),
                 ),
