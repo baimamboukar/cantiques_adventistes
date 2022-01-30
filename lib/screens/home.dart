@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cantiques_adventistes/providers/providers.dart';
 import 'package:cantiques_adventistes/utils/utils.dart';
 import 'package:cantiques_adventistes/widgets/widgets.dart';
@@ -29,21 +30,22 @@ class Home extends HookConsumerWidget {
               index.state = _index;
             },
             labelType: NavigationRailLabelType.selected,
-            destinations: const [
+            destinations: [
               NavigationRailDestination(
-                icon: Icon(Icons.favorite_border),
-                selectedIcon: Icon(Icons.favorite),
-                label: Text("Cantiques"),
+                icon: const Icon(Icons.favorite_border),
+                selectedIcon: const Icon(Icons.favorite),
+                label: AutoSizeText(
+                  "Cantiques",
+                  style: Styles.design(color: Palette.light, size: 14),
+                ),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.bookmark_border),
-                selectedIcon: Icon(Icons.book),
-                label: Text("Bookmarks"),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.star_border),
-                selectedIcon: Icon(Icons.star),
-                label: Text('Third'),
+                icon: const Icon(Icons.bookmark_border),
+                selectedIcon: const Icon(Icons.book),
+                label: AutoSizeText(
+                  "Bookmarks",
+                  style: Styles.design(color: Palette.light, size: 14),
+                ),
               ),
             ],
           ),
