@@ -1,15 +1,18 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:cantiques_adventistes/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class OptionBox extends StatelessWidget {
+class OptionBox extends HookConsumerWidget {
   const OptionBox({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    // final router = ref.watch(routerProvider);
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/');
+        context.router.pushNamed("/defterre-gimmi");
       },
       child: Card(
         color: Palette.primary,
