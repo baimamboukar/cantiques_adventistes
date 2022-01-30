@@ -31,7 +31,9 @@ class OptionBox extends HookConsumerWidget {
             children: [
               Align(
                 alignment: Alignment.bottomRight,
-                child: FaIcon(FontAwesomeIcons.bookOpen, color: Palette.dark),
+                child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: FaIcon(FontAwesomeIcons.adn, color: Palette.dark)),
               ),
               const Align(
                   alignment: Alignment.topCenter,
