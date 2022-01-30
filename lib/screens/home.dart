@@ -29,18 +29,26 @@ class Home extends HookConsumerWidget {
                   // open drawer
                 },
                 icon: const Icon(Icons.dashboard)),
-            trailing: const CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage(
-                "assets/images/advent.jpg",
-              ),
-            ),
+            // trailing: const CircleAvatar(
+            //   radius: 20,
+            //   backgroundImage: AssetImage(
+            //     "assets/images/advent.jpg",
+            //   ),
+            // ),
             backgroundColor: Palette.primary,
             onDestinationSelected: (int _index) {
               index.state = _index;
             },
-            labelType: NavigationRailLabelType.all,
+            labelType: NavigationRailLabelType.selected,
             destinations: [
+              NavigationRailDestination(
+                icon: const Icon(Icons.bookmark_border),
+                selectedIcon: const Icon(Icons.book),
+                label: Text(
+                  "Bookmarks",
+                  style: Styles.design(color: Palette.light, size: 14),
+                ),
+              ),
               NavigationRailDestination(
                 icon: const Icon(Icons.bookmark_border),
                 selectedIcon: const Icon(Icons.book),
@@ -60,7 +68,6 @@ class Home extends HookConsumerWidget {
             ],
           ),
           const VerticalDivider(thickness: 1, width: 1),
-          // This is the main content.
           Expanded(
             child: Column(
               children: [
