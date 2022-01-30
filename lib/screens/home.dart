@@ -1,20 +1,31 @@
+import 'package:cantiques_adventistes/providers/providers.dart';
 import 'package:cantiques_adventistes/utils/utils.dart';
 import 'package:cantiques_adventistes/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class Home extends StatelessWidget {
+class Home extends HookConsumerWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final index = ref.watch(navigationRailIndexProvider.state);
     return Scaffold(
       body: Row(
         children: <Widget>[
           NavigationRail(
             selectedIndex: 0,
-            trailing: Image.asset("assets/images/advent.jpg"),
+            trailing: CircleAvatar(
+              child: Image.asset(
+                "assets/images/advent.jpg",
+                height: 30,
+                width: 30,
+              ),
+            ),
             backgroundColor: Palette.primary,
-            onDestinationSelected: (int index) {},
+            onDestinationSelected: (int _index) {
+              index.state = _index;
+            },
             labelType: NavigationRailLabelType.selected,
             destinations: const [
               NavigationRailDestination(
