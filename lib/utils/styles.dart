@@ -13,4 +13,11 @@ class Styles {
   );
   static TextStyle title = TextStyle(
       fontSize: 20, color: Palette.primary, fontWeight: FontWeight.bold);
+  static TextStyle design(
+          {required Color color, required double size, bool? bold}) =>
+      TextStyle(
+        fontSize: 18,
+        color: Palette.primary,
+        fontStyle: FontStyle.italic,
+      );
 }
