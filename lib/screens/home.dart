@@ -29,12 +29,12 @@ class Home extends HookConsumerWidget {
                   // open drawer
                 },
                 icon: const Icon(Icons.dashboard)),
-            // trailing: const CircleAvatar(
-            //   radius: 20,
-            //   backgroundImage: AssetImage(
-            //     "assets/images/advent.jpg",
-            //   ),
-            // ),
+            trailing: const CircleAvatar(
+              radius: 20,
+              backgroundImage: AssetImage(
+                "assets/images/advent.jpg",
+              ),
+            ),
             backgroundColor: Palette.primary,
             onDestinationSelected: (int _index) {
               index.state = _index;
