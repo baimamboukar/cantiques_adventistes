@@ -28,13 +28,27 @@ class AppRouter extends _i2.RootStackRouter {
     DefterreGimmiRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i1.DefterreGimmi());
+    },
+    CantiqueViewRoute.name: (routeData) {
+      final pathParams = routeData.inheritedPathParams;
+      final args = routeData.argsAs<CantiqueViewRouteArgs>(
+          orElse: () =>
+              CantiqueViewRouteArgs(number: pathParams.getInt('number')));
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData,
+          child: _i1.CantiqueView(key: args.key, number: args.number));
     }
   };
 
   @override
   List<_i2.RouteConfig> get routes => [
         _i2.RouteConfig(HomeRoute.name, path: '/'),
-        _i2.RouteConfig(DefterreGimmiRoute.name, path: '/defterre-gimmi')
+        _i2.RouteConfig(DefterreGimmiRoute.name,
+            path: '/defterre-gimmi',
+            children: [
+              _i2.RouteConfig(CantiqueViewRoute.name,
+                  path: ':number', parent: DefterreGimmiRoute.name)
+            ])
       ];
 }
 
@@ -49,8 +63,34 @@ class HomeRoute extends _i2.PageRouteInfo<void> {
 /// generated route for
 /// [_i1.DefterreGimmi]
 class DefterreGimmiRoute extends _i2.PageRouteInfo<void> {
-  const DefterreGimmiRoute()
-      : super(DefterreGimmiRoute.name, path: '/defterre-gimmi');
+  const DefterreGimmiRoute({List<_i2.PageRouteInfo>? children})
+      : super(DefterreGimmiRoute.name,
+            path: '/defterre-gimmi', initialChildren: children);
 
   static const String name = 'DefterreGimmiRoute';
+}
+
+/// generated route for
+/// [_i1.CantiqueView]
+class CantiqueViewRoute extends _i2.PageRouteInfo<CantiqueViewRouteArgs> {
+  CantiqueViewRoute({_i3.Key? key, required int number})
+      : super(CantiqueViewRoute.name,
+            path: ':number',
+            args: CantiqueViewRouteArgs(key: key, number: number),
+            rawPathParams: {'number': number});
+
+  static const String name = 'CantiqueViewRoute';
+}
+
+class CantiqueViewRouteArgs {
+  const CantiqueViewRouteArgs({this.key, required this.number});
+
+  final _i3.Key? key;
+
+  final int number;
+
+  @override
+  String toString() {
+    return 'CantiqueViewRouteArgs{key: $key, number: $number}';
+  }
 }
