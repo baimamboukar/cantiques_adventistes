@@ -29,17 +29,20 @@ environment:
 dependencies:
   auto_route: ^3.2.2
   auto_size_text: ^3.0.0
-  build_runner: ^2.1.7
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_hooks: ^0.18.2
   flutter_native_splash: ^2.0.0
   flutter_riverpod: ^1.0.3
   font_awesome_flutter: ^9.2.0
   google_fonts: ^2.2.0
+  hooks_riverpod: ^1.0.3
   share_plus: ^3.0.4
 
 dev_dependencies:
+  auto_route_generator: null
+  build_runner: ^2.1.7
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
@@ -52,6 +55,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  generate: true
 
   # To add assets to your application, add an assets section, like this:
   assets:
